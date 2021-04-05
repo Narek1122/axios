@@ -1,31 +1,26 @@
 <template>
   <div id="app">
-    <div v-for="product in products">
-        <p>{{product.name}}</p>
-      <p>{{product.price}}</p>
-      <p>{{product.views}}</p>
-      <p>{{product.description}}</p>
-    </div>
+      <Menu></Menu>
     <router-view/>
   </div>
 </template>
 
 <script>
+
+import Menu from "./components/Globals/Menu";
+
 export default {
   name: 'App',
+  components:{
+    Menu : Menu
+  },
   data(){
     return{
-      product:[];
+      product:[]
     }
   },
-  mounted(){
-    this.getProducts();
-  },
-  methods:{
-    getProducts(){
 
-    }
-  }
+
 }
 </script>
 
