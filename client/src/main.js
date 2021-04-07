@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import axios from 'axios';
 import VueAxios from "vue-axios";
+import mixins from './mixins'
 window.axios = require('axios');
 Vue.use(VueAxios,axios);
 
@@ -14,6 +15,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  mixins,
   components: { App },
   template: '<App/>'
 })
